@@ -796,7 +796,8 @@ main > .work-hero:first-child {
 .impact-card div { padding: 0 .4rem .55rem; }
 
 .team-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 1rem; margin-top: 2rem; }
-.profile-card { display: grid; grid-template-columns: .75fr 1fr; gap: 1.2rem; align-items: end; border: 1px solid var(--line); border-radius: calc(var(--radius) + 12px); padding: .8rem; background: rgba(255,255,255,.42); }
+.profile-card { display: grid; grid-template-columns: .75fr 1fr; gap: 1.2rem; align-items: end; min-width: 0; border: 1px solid var(--line); border-radius: calc(var(--radius) + 12px); padding: .8rem; background: rgba(255,255,255,.42); }
+.profile-card > div { min-width: 0; }
 .profile-card img { aspect-ratio: 4 / 5; box-shadow: none; }
 .profile-card h2 {
   font-size: clamp(2.4rem, 4.25vw, 4.1rem);
@@ -808,18 +809,33 @@ main > .work-hero:first-child {
 }
 .team-poster img { object-fit: contain; background: #1d2c25; }
 .team-hero {
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) minmax(500px, 580px);
+  align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
 }
-.team-hero h1 { max-width: 10ch; }
+.team-hero h1 {
+  max-width: none;
+  font-size: clamp(4rem, 5.2vw, 5.7rem);
+}
+.team-hero h1 span {
+  display: block;
+  white-space: nowrap;
+}
 .team-hero-copy { min-width: 0; }
 .founder-card {
-  align-self: end;
-  margin-bottom: clamp(.5rem, 3vw, 2rem);
+  grid-template-columns: minmax(230px, .95fr) minmax(230px, 1fr);
+  align-self: center;
+  min-height: 350px;
+  padding: 1rem;
+  gap: 1.35rem;
+  margin-bottom: clamp(.5rem, 2vw, 1.5rem);
   box-shadow: var(--shadow);
 }
-.founder-card img { max-height: 340px; object-position: center 18%; }
+.founder-card img {
+  height: 310px;
+  max-height: none;
+  object-position: center 18%;
+}
 .team-layout-single { grid-template-columns: 1fr; }
 .team-layout-single .team-poster {
   grid-template-columns: minmax(260px, .72fr) 1fr;
@@ -950,10 +966,18 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
 .footer-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: clamp(2rem, 4vw, 3rem);
   padding-top: 1rem;
   border-top: 1px solid var(--line);
+}
+.footer-legal-links,
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
 }
 
 @media (max-width: 920px) {
@@ -977,6 +1001,7 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
   .impact-card.large { grid-row: auto; }
+  .team-hero h1 span { white-space: normal; }
   .founder-card { margin-bottom: 0; }
   .focus-nav {
     position: static;
@@ -1077,10 +1102,26 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   h1 { font-size: clamp(2.85rem, 12.5vw, 3.75rem); letter-spacing: -.045em; line-height: 1.04; }
   h2 { font-size: clamp(2.2rem, 12vw, 3.5rem); line-height: 1.04; }
   .work-hero h1,
-  .work-index h2 {
+  .work-index h2,
+  .team-hero h1 {
     font-size: clamp(2.65rem, 11vw, 3.25rem);
     letter-spacing: -.055em;
     max-width: 100%;
+  }
+  .team-hero h1 {
+    font-size: clamp(2.35rem, 9.2vw, 2.8rem);
+  }
+  .team-hero-copy,
+  .team-hero .hero-lede,
+  .founder-card,
+  .founder-card p {
+    max-width: calc(100vw - 1.6rem);
+  }
+  .team-hero .hero-lede {
+    max-width: 30ch;
+  }
+  .founder-card p:not(.eyebrow) {
+    max-width: 28ch;
   }
   .work-hero .hero-lede,
   .work-index-copy p:last-child {
@@ -1166,8 +1207,16 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   }
   .hero { min-height: auto; padding-top: 3rem; }
   .profile-card { grid-template-columns: 1fr; }
+  .founder-card {
+    min-height: auto;
+    padding: .75rem;
+    gap: .95rem;
+  }
   .newsletter-form div, .footer-bottom { flex-direction: column; }
-  .founder-card img { max-height: none; }
+  .founder-card img {
+    height: clamp(270px, 74vw, 340px);
+    max-height: none;
+  }
   .focus-nav {
     padding: .6rem;
     gap: .45rem;
