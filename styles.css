@@ -52,6 +52,17 @@ button, input { font: inherit; }
   border-radius: 999px;
 }
 .skip-link:focus { top: 1rem; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 .site-header {
   position: sticky;
@@ -493,8 +504,57 @@ p { margin: 0; color: var(--muted); }
   transform: translateY(-2px);
 }
 
+.focus-box-section {
+  padding-top: clamp(1.35rem, 3vw, 2.2rem);
+  padding-bottom: clamp(1.8rem, 3.8vw, 3rem);
+  border-top: 1px solid var(--line);
+}
+.focus-box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+  gap: .9rem;
+}
+.focus-box {
+  min-width: 0;
+  min-height: 176px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .95rem;
+  padding: 1.35rem 1rem 1.15rem;
+  color: var(--domain-color);
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background:
+    linear-gradient(135deg, rgba(var(--domain-rgb), .055), rgba(255,255,255,.44) 46%, rgba(255,255,255,.18));
+  transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.focus-box svg {
+  width: 80px;
+  height: 80px;
+  display: block;
+  overflow: visible;
+}
+.focus-box span {
+  color: var(--ink);
+  font: 500 .72rem/1.38 var(--font-mono);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+.focus-box:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--domain-rgb), .48);
+  background:
+    linear-gradient(135deg, rgba(var(--domain-rgb), .105), rgba(255,255,255,.66) 48%, rgba(255,255,255,.3));
+  box-shadow: 0 18px 50px rgba(20, 20, 20, .055);
+}
+
 .work-index {
-  border-block: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   display: grid;
   grid-template-columns: minmax(0, .95fr) minmax(280px, .85fr);
   gap: clamp(1.5rem, 5vw, 4rem);
@@ -925,6 +985,9 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
     margin-top: 1rem;
   }
   .proof-strip, .focus-grid, .impact-layout, .card-grid { grid-template-columns: 1fr; }
+  .focus-box-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
   .impact-card.large { grid-row: auto; }
   .founder-card { margin-bottom: 0; }
   .focus-nav {
@@ -1044,6 +1107,27 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   .work-hero-art,
   .work-index-art {
     display: none;
+  }
+  .focus-box-section {
+    padding-top: 1.6rem;
+    padding-bottom: 2.1rem;
+  }
+  .focus-box-grid {
+    grid-template-columns: 1fr;
+    gap: .65rem;
+  }
+  .focus-box {
+    min-height: 138px;
+    padding: .95rem .7rem .85rem;
+    gap: .55rem;
+  }
+  .focus-box svg {
+    width: 58px;
+    height: 58px;
+  }
+  .focus-box span {
+    font-size: .62rem;
+    line-height: 1.32;
   }
   .about-visual-hero {
     min-height: auto;
