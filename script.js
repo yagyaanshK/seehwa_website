@@ -40,10 +40,11 @@ document.querySelectorAll('[data-elevation-counter]').forEach((counter) => {
   }
 
   const ease = (t) => (t < 0.5 ? 2 * t * t : 1 - ((-2 * t + 2) ** 2) / 2);
-  let lastValue = 0;
+  let lastValue = base;
+  counter.textContent = formatter.format(base);
 
-  const tick = (time) => {
-    const progress = (time % loop) / loop;
+  window.setInterval(() => {
+    const progress = (performance.now() % loop) / loop;
     const value = progress < climb ? base + ((peak - base) * ease(progress / climb)) : peak;
     const rounded = Math.round(value);
 
@@ -51,9 +52,5 @@ document.querySelectorAll('[data-elevation-counter]').forEach((counter) => {
       counter.textContent = formatter.format(rounded);
       lastValue = rounded;
     }
-
-    window.requestAnimationFrame(tick);
-  };
-
-  window.requestAnimationFrame(tick);
+  }, 70);
 });

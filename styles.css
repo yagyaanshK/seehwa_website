@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap");
-
 :root {
   --paper: #f7f5f0;
   --ink: #151515;
@@ -131,7 +129,7 @@ main > .page-hero:first-child {
   text-align: right;
   pointer-events: none;
 }
-.summit-readout span {
+.summit-label {
   display: block;
   margin-bottom: .35rem;
   color: #9a968b;
@@ -139,17 +137,17 @@ main > .page-hero:first-child {
   letter-spacing: .2em;
   text-transform: uppercase;
 }
-.summit-readout strong {
+.summit-number {
   display: inline-flex;
   align-items: baseline;
   gap: .32rem;
   color: var(--ink);
-  font: 500 clamp(1.8rem, 3vw, 2.35rem)/1 var(--font-mono);
+  font: 500 34px/1 var(--font-mono);
   letter-spacing: -.01em;
 }
-.summit-readout small {
+.summit-number small {
   color: #9a968b;
-  font-size: .44em;
+  font-size: 15px;
   letter-spacing: 0;
 }
 .survey-guide {
