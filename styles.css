@@ -505,24 +505,24 @@ p { margin: 0; color: var(--muted); }
 }
 
 .focus-box-section {
-  padding-top: clamp(1.35rem, 3vw, 2.2rem);
-  padding-bottom: clamp(1.8rem, 3.8vw, 3rem);
+  padding-top: clamp(1.15rem, 2.5vw, 1.8rem);
+  padding-bottom: clamp(1.45rem, 3vw, 2.4rem);
   border-top: 1px solid var(--line);
 }
 .focus-box-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
-  gap: .9rem;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: .72rem;
 }
 .focus-box {
   min-width: 0;
-  min-height: 176px;
+  min-height: 142px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: .95rem;
-  padding: 1.35rem 1rem 1.15rem;
+  gap: .65rem;
+  padding: .9rem .55rem .8rem;
   color: var(--domain-color);
   text-align: center;
   text-decoration: none;
@@ -540,8 +540,8 @@ p { margin: 0; color: var(--muted); }
 }
 .focus-box span {
   color: var(--ink);
-  font: 500 .72rem/1.38 var(--font-mono);
-  letter-spacing: .07em;
+  font: 500 .62rem/1.32 var(--font-mono);
+  letter-spacing: .055em;
   text-transform: uppercase;
   overflow-wrap: anywhere;
 }
