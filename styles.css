@@ -484,15 +484,39 @@ main > .work-hero:first-child {
   gap: .7rem;
   margin: 1rem 0 1.25rem;
 }
-.contribution-list article {
-  display: grid;
-  gap: .25rem;
+.contribution-list details {
   padding: .85rem 0;
   border-bottom: 1px solid var(--line);
 }
-.contribution-list article:last-child { border-bottom: 0; }
-.contribution-list strong { color: var(--ink); }
-.contribution-list span { color: var(--muted); }
+.contribution-list details:last-child { border-bottom: 0; }
+.contribution-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--ink);
+  font-weight: 700;
+}
+.contribution-list summary::-webkit-details-marker { display: none; }
+.contribution-list summary::after {
+  content: "";
+  width: .55rem;
+  height: .55rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-.15rem);
+  transition: transform .18s ease;
+  flex: 0 0 auto;
+}
+.contribution-list details[open] summary::after {
+  transform: rotate(225deg) translateY(-.15rem);
+}
+.contribution-list details p {
+  margin-top: .55rem;
+  color: var(--muted);
+}
 .newsletter-form { display: grid; gap: .7rem; }
 .newsletter-form label { font-family: ui-sans-serif, system-ui, sans-serif; font-weight: 700; }
 .newsletter-form div { display: flex; gap: .6rem; }
