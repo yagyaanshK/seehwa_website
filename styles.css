@@ -288,7 +288,6 @@ main > .page-hero:first-child {
   text-anchor: middle;
 }
 .clock-hand,
-.skill-hand,
 .network-lines {
   stroke: currentColor;
   stroke-width: 2;
@@ -296,17 +295,14 @@ main > .page-hero:first-child {
   stroke-linejoin: round;
 }
 .network-lines,
-.skill-hand {
+.skill-hand-mark {
+  fill: currentColor;
+}
+.network-lines {
   fill: none;
   stroke: currentColor;
 }
 .network-lines { stroke-width: 1.4; }
-.skill-hand {
-  stroke-width: 2.3;
-}
-.skill-hand path {
-  vector-effect: non-scaling-stroke;
-}
 .contribution-node .rupee-symbol {
   fill: currentColor;
   font: 700 30px/1 var(--font-sans);
