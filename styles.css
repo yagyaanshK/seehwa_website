@@ -98,7 +98,7 @@ h1 {
   margin: 0;
   max-width: 16ch;
   font-size: clamp(3.1rem, 5.45vw, 5.35rem);
-  line-height: .94;
+  line-height: 1.02;
   letter-spacing: -.05em;
   font-weight: 500;
 }
@@ -107,7 +107,7 @@ h2 {
   margin: 0;
   max-width: 15ch;
   font-size: clamp(2.35rem, 5.35vw, 5.1rem);
-  line-height: .94;
+  line-height: 1.02;
   letter-spacing: -.058em;
   font-weight: 500;
 }
@@ -326,7 +326,7 @@ p { margin: 0; color: var(--muted); }
 .work-section-copy h2 {
   max-width: 16.5ch;
   font-size: clamp(2.45rem, 4.15vw, 4.25rem);
-  line-height: .97;
+  line-height: 1.04;
   letter-spacing: -.052em;
 }
 .work-section-copy > p {
@@ -409,7 +409,7 @@ p { margin: 0; color: var(--muted); }
   display: block;
   color: var(--ink);
   font-size: clamp(1.3rem, 2.3vw, 2rem);
-  line-height: 1;
+  line-height: 1.12;
 }
 .nav-card p { margin-top: 1.5rem; }
 
@@ -423,6 +423,14 @@ p { margin: 0; color: var(--muted); }
 .team-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 1rem; margin-top: 2rem; }
 .profile-card { display: grid; grid-template-columns: .75fr 1fr; gap: 1.2rem; align-items: end; border: 1px solid var(--line); border-radius: calc(var(--radius) + 12px); padding: .8rem; background: rgba(255,255,255,.42); }
 .profile-card img { aspect-ratio: 4 / 5; box-shadow: none; }
+.profile-card h2 {
+  font-size: clamp(2.4rem, 4.25vw, 4.1rem);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+.profile-card p:not(.eyebrow) {
+  line-height: 1.38;
+}
 .team-poster img { object-fit: contain; background: #1d2c25; }
 .team-hero {
   grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
@@ -601,7 +609,7 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   .eyebrow { margin-bottom: .65rem; }
   h1 {
     font-size: clamp(2.9rem, 4.35vw, 4.25rem);
-    line-height: .95;
+    line-height: 1.03;
   }
   h2 { font-size: clamp(2.15rem, 4.15vw, 4.05rem); }
   .hero-lede {
@@ -622,7 +630,7 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   .work-section-copy h2 {
     max-width: 17ch;
     font-size: clamp(2.25rem, 3.75vw, 3.65rem);
-    line-height: .98;
+    line-height: 1.04;
   }
   .work-section-copy > p {
     font-size: clamp(.94rem, 1.12vw, 1.02rem);
@@ -644,8 +652,8 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   .section { width: calc(100vw - 1.1rem); max-width: calc(100vw - 1.1rem); padding: 3.2rem 0; }
   .site-header { padding: .8rem .7rem; }
   .brand img { width: 170px; }
-  h1 { font-size: clamp(2.85rem, 12.5vw, 3.75rem); letter-spacing: -.045em; line-height: .94; }
-  h2 { font-size: clamp(2.2rem, 12vw, 3.5rem); }
+  h1 { font-size: clamp(2.85rem, 12.5vw, 3.75rem); letter-spacing: -.045em; line-height: 1.04; }
+  h2 { font-size: clamp(2.2rem, 12vw, 3.5rem); line-height: 1.04; }
   .work-hero h1,
   .work-index h2 {
     font-size: clamp(2.65rem, 11vw, 3.25rem);
