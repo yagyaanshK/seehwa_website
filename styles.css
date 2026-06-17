@@ -198,6 +198,87 @@ main > .page-hero:first-child {
   opacity: .4;
   letter-spacing: 2.6px;
 }
+.contribute-visual-hero {
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  align-content: center;
+}
+.contribute-hero-copy { min-width: 0; }
+.contribute-visual-hero h1 {
+  max-width: 11ch;
+  letter-spacing: -.015em;
+}
+.contribute-visual-hero .hero-lede {
+  max-width: 46ch;
+  line-height: 1.55;
+}
+.contribution-visual {
+  width: min(100%, 480px);
+  justify-self: center;
+  margin: 0;
+  color: var(--accent);
+}
+.contribution-visual svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  font-family: var(--font-mono);
+}
+.contribution-spokes {
+  stroke: currentColor;
+  stroke-width: 1.2;
+  opacity: .22;
+}
+.contribution-guide {
+  fill: none;
+  stroke: #5d7d63;
+  stroke-width: 1;
+  opacity: .2;
+  stroke-dasharray: 2 6;
+}
+.contribution-pulse,
+.contribution-core,
+.network-dots {
+  fill: currentColor;
+}
+.contribution-hub {
+  fill: currentColor;
+  fill-opacity: .06;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+.contribution-arrival {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+.contribution-node > circle {
+  fill: var(--paper);
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+.contribution-node text {
+  fill: #5d7d63;
+  font: 400 11px/1 var(--font-mono);
+  letter-spacing: 1.5px;
+  text-anchor: middle;
+}
+.clock-hand,
+.skill-spark,
+.network-lines,
+.coin-line {
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+.network-lines,
+.coin-ring {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+.coin-line { stroke-width: 1.6; }
 .eyebrow {
   margin: 0 0 1rem;
   color: var(--muted);
@@ -714,11 +795,16 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   .nav-toggle { display: inline-flex; }
   .site-nav { position: absolute; inset: 100% 1rem auto 1rem; display: none; flex-direction: column; align-items: stretch; padding: 1rem; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); box-shadow: var(--shadow); }
   .site-nav[data-open="true"] { display: flex; }
-  .hero, .recognition, .vision, .newsletter, .contact, .contribute, .split, .section-heading, .team-layout, .team-hero, .team-layout-single .team-poster, .footer-grid, .work-detail-section, .work-hero, .work-index, .about-visual-hero { grid-template-columns: 1fr; }
+  .hero, .recognition, .vision, .newsletter, .contact, .contribute, .split, .section-heading, .team-layout, .team-hero, .team-layout-single .team-poster, .footer-grid, .work-detail-section, .work-hero, .work-index, .about-visual-hero, .contribute-visual-hero { grid-template-columns: 1fr; }
   h1 { max-width: 100%; }
   .summit-visual {
     justify-self: start;
     max-width: 540px;
+    margin-top: 1rem;
+  }
+  .contribution-visual {
+    justify-self: start;
+    width: min(100%, 440px);
     margin-top: 1rem;
   }
   .proof-strip, .focus-grid, .impact-layout, .card-grid { grid-template-columns: 1fr; }
@@ -875,6 +961,19 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   }
   .summit-number small {
     font-size: 12px;
+  }
+  .contribute-visual-hero {
+    min-height: auto;
+    align-content: start;
+    padding-bottom: 2.4rem;
+  }
+  .contribution-visual {
+    width: min(76vw, 320px);
+    justify-self: center;
+    margin: 1.8rem auto .5rem;
+  }
+  .contribution-visual svg {
+    overflow: hidden;
   }
   .hero { min-height: auto; padding-top: 3rem; }
   .profile-card { grid-template-columns: 1fr; }
