@@ -238,7 +238,6 @@ main > .page-hero:first-child {
   stroke-dasharray: 2 6;
 }
 .contribution-pulse,
-.contribution-core,
 .network-dots {
   fill: currentColor;
 }
@@ -265,20 +264,29 @@ main > .page-hero:first-child {
   text-anchor: middle;
 }
 .clock-hand,
-.skill-spark,
-.network-lines,
-.coin-line {
+.skill-hand,
+.network-lines {
   stroke: currentColor;
   stroke-width: 1.8;
   stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .network-lines,
-.coin-ring {
+.skill-hand {
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.4;
 }
-.coin-line { stroke-width: 1.6; }
+.network-lines { stroke-width: 1.4; }
+.contribution-node .rupee-symbol {
+  fill: currentColor;
+  font: 700 24px/1 var(--font-sans);
+  letter-spacing: 0;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+.contribution-logo-mark {
+  overflow: visible;
+}
 .eyebrow {
   margin: 0 0 1rem;
   color: var(--muted);
