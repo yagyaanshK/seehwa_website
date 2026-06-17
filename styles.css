@@ -453,13 +453,11 @@ p { margin: 0; color: var(--muted); }
   padding: clamp(1.2rem, 2vw, 1.8rem);
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background:
-    linear-gradient(135deg, rgba(var(--domain-rgb), .075), rgba(255,255,255,.34) 46%, rgba(255,255,255,.2));
+  background: #ece9e2;
 }
 .focus-grid article:nth-child(2n),
 .focus-card:nth-child(2n) {
-  background:
-    linear-gradient(135deg, rgba(var(--domain-rgb), .085), rgba(255,255,255,.56) 48%, rgba(255,255,255,.3));
+  background: #ece9e2;
 }
 .focus-grid p { font-size: .98rem; }
 .focus-grid.compact article { min-height: 170px; }
@@ -473,16 +471,7 @@ p { margin: 0; color: var(--muted); }
   gap: 1rem;
   color: inherit;
   text-decoration: none;
-  transition: background .18s ease, box-shadow .18s ease, transform .18s ease, border-color .18s ease;
-}
-.focus-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto auto 0;
-  width: 100%;
-  height: 3px;
-  background: rgba(var(--domain-rgb), .42);
-  opacity: .7;
+  transition: background .18s ease, box-shadow .18s ease, transform .18s ease;
 }
 .focus-card h3,
 .focus-card p {
@@ -498,9 +487,8 @@ p { margin: 0; color: var(--muted); }
   text-transform: uppercase;
 }
 .focus-card:hover {
-  background:
-    linear-gradient(135deg, rgba(var(--domain-rgb), .13), rgba(255,255,255,.76) 50%);
-  box-shadow: inset 0 0 0 1px rgba(var(--domain-rgb), .45);
+  background: white;
+  box-shadow: none;
   transform: translateY(-2px);
 }
 
