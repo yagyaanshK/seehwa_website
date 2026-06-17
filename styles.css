@@ -211,8 +211,11 @@ p { margin: 0; color: var(--muted); }
 .work-hero {
   grid-template-columns: minmax(0, .85fr) minmax(300px, .95fr);
   gap: clamp(2rem, 6vw, 6rem);
-  align-items: end;
+  align-items: center;
   align-content: start;
+}
+main > .work-hero:first-child {
+  padding-top: clamp(3.65rem, 6vw, 5.25rem);
 }
 .work-hero-copy,
 .work-index-copy { min-width: 0; }
@@ -220,22 +223,34 @@ p { margin: 0; color: var(--muted); }
 .work-art {
   width: 100%;
   min-width: 0;
+  margin: 0;
   color: var(--accent);
+}
+.work-art-card {
+  display: grid;
+  place-items: center;
+  min-height: clamp(280px, 30vw, 380px);
+  padding: clamp(1.15rem, 2.2vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 12px);
+  background: rgba(255,255,255,.42);
+  box-shadow: var(--shadow);
 }
 .work-art svg {
   display: block;
   width: 100%;
+  max-height: 100%;
   height: auto;
 }
 .work-hero-art {
   align-self: center;
-  max-width: 640px;
+  max-width: 600px;
   justify-self: end;
 }
 .work-index-art {
   max-width: 520px;
   justify-self: end;
-  opacity: .9;
+  min-height: clamp(230px, 24vw, 320px);
 }
 .terrain-line,
 .path-line {
@@ -597,7 +612,7 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   .work-index-art {
     justify-self: stretch;
     max-width: 560px;
-    opacity: .78;
+    min-height: 260px;
   }
   .work-hero-art {
     margin-top: .5rem;
