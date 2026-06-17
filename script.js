@@ -25,3 +25,35 @@ document.querySelectorAll('.newsletter-form').forEach((form) => {
     }
   });
 });
+
+document.querySelectorAll('[data-elevation-counter]').forEach((counter) => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const base = 2820;
+  const peak = 5789;
+  const loop = 8000;
+  const climb = 0.62;
+  const formatter = new Intl.NumberFormat('en-US');
+
+  if (reduceMotion) {
+    counter.textContent = formatter.format(peak);
+    return;
+  }
+
+  const ease = (t) => (t < 0.5 ? 2 * t * t : 1 - ((-2 * t + 2) ** 2) / 2);
+  let lastValue = 0;
+
+  const tick = (time) => {
+    const progress = (time % loop) / loop;
+    const value = progress < climb ? base + ((peak - base) * ease(progress / climb)) : peak;
+    const rounded = Math.round(value);
+
+    if (rounded !== lastValue) {
+      counter.textContent = formatter.format(rounded);
+      lastValue = rounded;
+    }
+
+    window.requestAnimationFrame(tick);
+  };
+
+  window.requestAnimationFrame(tick);
+});
