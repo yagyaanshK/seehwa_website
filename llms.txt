@@ -1,0 +1,56 @@
+# SEEHWA Green Foundation
+
+Website: https://seehwagreen.org/
+Canonical organization name: SEEHWA Green Foundation
+Expanded name: Sustainable Ecology, Energy, HVAC, and Water Alliance
+Entity type: Section 8 non-profit company headquartered in Ladakh, India
+Primary email: seehwagreen@gmail.com
+Phone: +91 88003 26282; +91 9186115322
+Address: 12, Likir Labrang, Housing Colony, Leh, Ladakh 194101, India
+
+## Site Pages
+
+- Home: https://seehwagreen.org/
+- About Us: https://seehwagreen.org/about.html
+- Work: https://seehwagreen.org/work.html
+- Our Team: https://seehwagreen.org/team.html
+- Contribute: https://seehwagreen.org/contribute.html
+- Contact: https://seehwagreen.org/contact.html
+- Privacy Policy: https://seehwagreen.org/privacy.html
+
+## Summary
+
+SEEHWA Green Foundation works to advance the Sustainable Development Goals through practical, science-backed action in fragile high-altitude ecosystems. The organization focuses on resilient, net-zero and circular mountain communities rooted in local knowledge and strengthened by modern science.
+
+## Focus Areas
+
+- Sustainability: net-zero emissions, resource circularity and low-impact design.
+- Energy & HVAC: renewable energy systems, passive solar buildings, decentralized microgrids, and low-energy heating and ventilation systems for extreme cold.
+- Ecology: ecosystem regeneration, biodiversity conservation and nature-based solutions.
+- Water and Waste Management: circular water systems, greywater reuse, sanitation and zero-waste solutions.
+- Agri-Ecology: climate-smart agriculture, organic farming, composting and regenerative practices.
+- Health: community-based healthcare access, preventive care and last-mile health infrastructure.
+- Livelihood and Integrated Rural Development: infrastructure, education access and income generation for holistic wellbeing.
+- Climate Resilience: adaptive infrastructure, community resilience planning and ecosystem-based approaches.
+
+## Recognition
+
+SEEHWA Green Foundation is a recipient of the 2026 NaropaCare Grant. NaropaCare supports locally rooted organizations addressing healthcare access challenges in Ladakh.
+Reference: https://www.livetolove.org/naropacare
+
+
+## Work Page Focus Sections
+
+The Work page is organized into section-wise focus areas:
+
+- Sustainability & Climate Resilience
+- Energy & HVAC
+- Ecology
+- Water & Waste Management
+- Agri-Ecology
+- Health
+- Livelihood & Integrated Rural Development
+
+## Donation and Newsletter Status
+
+The Contribute page covers volunteering, internships, CSR partnerships, technical collaboration, donations and newsletter updates. UPI, payment gateway and newsletter integrations are placeholders and should be connected after visual/content approval.

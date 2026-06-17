@@ -1,0 +1,16 @@
+{
+  "name": "SEEHWA Green Foundation",
+  "short_name": "SEEHWA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f5f0",
+  "theme_color": "#f7f5f0",
+  "description": "Sustainable solutions for resilient mountain communities.",
+  "icons": [
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "2966x761",
+      "type": "image/png"
+    }
+  ]
+}
