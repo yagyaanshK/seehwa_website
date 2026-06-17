@@ -842,7 +842,40 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   .work-index-art {
     display: none;
   }
-  .summit-visual { display: none; }
+  .about-visual-hero {
+    min-height: auto;
+    align-content: start;
+    padding-bottom: 2.4rem;
+  }
+  .summit-visual {
+    display: block;
+    width: min(88vw, 360px);
+    max-width: 360px;
+    justify-self: center;
+    margin: 1.8rem auto 0;
+  }
+  .summit-visual svg {
+    overflow: hidden;
+  }
+  .summit-readout {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0 0 -1.85rem;
+    padding-right: .75rem;
+    text-align: right;
+  }
+  .summit-label {
+    margin-bottom: .25rem;
+    font-size: .58rem;
+    letter-spacing: .18em;
+  }
+  .summit-number {
+    font-size: 26px;
+  }
+  .summit-number small {
+    font-size: 12px;
+  }
   .hero { min-height: auto; padding-top: 3rem; }
   .profile-card { grid-template-columns: 1fr; }
   .newsletter-form div, .footer-bottom { flex-direction: column; }
