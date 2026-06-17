@@ -66,6 +66,9 @@ button, input { font: inherit; }
   margin-inline: auto;
   padding: clamp(3rem, 6vw, 5.5rem) 0;
 }
+main > .section:first-child {
+  padding-top: clamp(4.25rem, 7vw, 6.25rem);
+}
 .hero {
   display: grid;
   grid-template-columns: minmax(0, .98fr) minmax(300px, .9fr);
@@ -81,6 +84,10 @@ button, input { font: inherit; }
   display: grid;
   align-content: end;
   padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+main > .hero:first-child,
+main > .page-hero:first-child {
+  padding-top: clamp(4.25rem, 7vw, 6.25rem);
 }
 .page-hero h1 { max-width: 12ch; }
 .page-hero .hero-lede { max-width: 760px; }
@@ -601,10 +608,17 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
   .site-header { padding-block: .7rem; }
   .brand img { width: 190px; }
   .section { padding-block: 2.4rem; }
+  main > .section:first-child {
+    padding-top: 3.7rem;
+  }
   .hero {
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
     gap: clamp(1.6rem, 3vw, 3rem);
+  }
+  main > .hero:first-child,
+  main > .page-hero:first-child {
+    padding-top: 3.7rem;
   }
   .eyebrow { margin-bottom: .65rem; }
   h1 {
@@ -650,6 +664,9 @@ address { font-style: normal; color: var(--muted); font-size: clamp(1.05rem, 1.8
 
 @media (max-width: 620px) {
   .section { width: calc(100vw - 1.1rem); max-width: calc(100vw - 1.1rem); padding: 3.2rem 0; }
+  main > .section:first-child {
+    padding-top: 4rem;
+  }
   .site-header { padding: .8rem .7rem; }
   .brand img { width: 170px; }
   h1 { font-size: clamp(2.85rem, 12.5vw, 3.75rem); letter-spacing: -.045em; line-height: 1.04; }
