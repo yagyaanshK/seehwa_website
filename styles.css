@@ -241,6 +241,30 @@ main > .page-hero:first-child {
 .network-dots {
   fill: currentColor;
 }
+.contribution-pulse {
+  --move-x: 0px;
+  --move-y: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: contribution-pulse-chain 6s linear infinite both;
+}
+.pulse-time {
+  --move-y: 66px;
+}
+.pulse-networks {
+  --move-x: -66px;
+  animation-delay: 1.5s;
+}
+.pulse-capital {
+  --move-y: -66px;
+  animation-delay: 3s;
+}
+.pulse-skill {
+  --move-x: 66px;
+  animation-delay: 4.5s;
+}
 .contribution-hub {
   fill: currentColor;
   fill-opacity: .06;
@@ -292,6 +316,37 @@ main > .page-hero:first-child {
 }
 .contribution-logo-mark {
   overflow: visible;
+}
+@keyframes contribution-pulse-chain {
+  0% {
+    opacity: 0;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+  2% {
+    opacity: 1;
+    visibility: visible;
+  }
+  25% {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(calc(var(--move-x) * .75), calc(var(--move-y) * .75));
+  }
+  33.332% {
+    opacity: 0;
+    visibility: visible;
+    transform: translate(var(--move-x), var(--move-y));
+  }
+  33.333% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(var(--move-x), var(--move-y));
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(var(--move-x), var(--move-y));
+  }
 }
 .eyebrow {
   margin: 0 0 1rem;
