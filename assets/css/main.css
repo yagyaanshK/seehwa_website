@@ -1249,3 +1249,72 @@ a.tile:hover {
   .form input { border-radius: var(--radius); }
   .form .btn { justify-content: center; }
 }
+
+/* ==========================================================================
+   Partners
+   Source logos are inconsistent: most sit on white, two carry their own
+   coloured background, one is transparent. Each is centred inside a white
+   card so the wall reads as one set regardless of what the file contains.
+   ========================================================================== */
+
+.partners {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 22vw, 260px), 1fr));
+  gap: clamp(.75rem, 1.4vw, 1.15rem);
+}
+
+.partner {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  overflow: hidden;
+  transition: border-color .25s var(--ease), transform .25s var(--ease),
+              box-shadow .25s var(--ease);
+}
+.partner:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px rgba(12, 26, 20, .07);
+}
+
+.partner__mark {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 2;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--white);
+}
+.partner__mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* logos are supplied at wildly different densities; cap the optical size
+     so a 200px mark and a 1080px mark read at the same weight */
+  max-height: 100px;
+  max-width: 82%;
+}
+
+/* logos that carry their own coloured background need less breathing room,
+   otherwise the colour block reads as a stray swatch inside the card */
+.partner--bleed .partner__mark { padding: clamp(1rem, 2vw, 1.4rem); }
+.partner--bleed .partner__mark img { max-height: 118px; max-width: 92%; }
+
+.partner__name {
+  padding: 1rem clamp(1rem, 2vw, 1.35rem) 1.25rem;
+  border-top: 1px solid var(--line);
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+@media (max-width: 620px) {
+  .partners { grid-template-columns: repeat(2, 1fr); gap: .65rem; }
+  .partner__mark { padding: 1.1rem; aspect-ratio: 4 / 3; }
+  .partner__mark img { max-height: 68px; }
+  .partner--bleed .partner__mark img { max-height: 80px; }
+  .partner__name { padding: .8rem .85rem 1rem; font-size: .86rem; }
+}

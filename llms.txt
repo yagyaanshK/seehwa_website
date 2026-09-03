@@ -14,6 +14,7 @@ Address: 12, Likir Labrang, Housing Colony, Leh, Ladakh 194101, India
 - About Us: https://seehwagreen.org/about.html
 - Work: https://seehwagreen.org/work.html
 - Our Team: https://seehwagreen.org/team.html
+- Our Partners: https://seehwagreen.org/partners.html
 - Contribute: https://seehwagreen.org/contribute.html
 - Contact: https://seehwagreen.org/contact.html
 - Privacy Policy: https://seehwagreen.org/privacy.html
@@ -54,3 +55,17 @@ The Work page is organized into section-wise focus areas:
 ## Donation and Newsletter Status
 
 The Contribute page covers volunteering, internships, CSR partnerships, technical collaboration, donations and newsletter updates. UPI, payment gateway and newsletter integrations are placeholders and should be connected after visual/content approval.
+
+## Partners
+
+SEEHWA Green Foundation works alongside the following institutions and organizations:
+
+- Central Institute of Buddhist Studies
+- Entrepreneurship Development Institute of India
+- Ladakh Oma
+- Live to Love
+- Mahabodhi International Meditation Centre
+- NaropaCare
+- Regenerative Nomads
+- UT Animal Husbandry
+- UT School Education Department
