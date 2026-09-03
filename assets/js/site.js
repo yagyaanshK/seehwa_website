@@ -81,3 +81,19 @@
     if (event.matches) stopSmil();
   });
 })();
+
+/* Newsletter placeholder — no mailing backend is connected yet. */
+document.querySelectorAll('.newsletter-form').forEach(function (form) {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var note = form.querySelector('.form__note');
+    var input = form.querySelector('input[type="email"]');
+    if (!note) return;
+    if (input && !input.value.trim()) {
+      note.textContent = 'Please enter an email address.';
+      input.focus();
+      return;
+    }
+    note.textContent = 'Newsletter integration is pending. Please email seehwagreen@gmail.com for now.';
+  });
+});
