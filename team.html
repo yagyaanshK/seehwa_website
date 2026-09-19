@@ -101,20 +101,15 @@
     <section class="section" aria-labelledby="founder-title">
       <div class="container">
         <div class="founder">
-          <figure class="founder__media">
-            <picture>
-          <source type="image/webp"
-                  srcset="assets/images/opt/founder-640.webp 640w,
-                          assets/images/opt/founder-973.webp 973w"
-                  sizes="(max-width: 900px) 100vw, 40vw">
-          <img src="assets/images/opt/founder.jpg" alt="Jigmat Paljor, founder of SEEHWA Green Foundation" width="973" height="1400" loading="lazy" decoding="async">
-        </picture>
-          </figure>
+          <picture class="founder__photo">
+            <source type="image/webp" srcset="assets/images/opt/team/jigmat-paljor.webp">
+            <img src="assets/images/opt/team/jigmat-paljor.jpg" alt="Jigmat Paljor, founder of SEEHWA Green Foundation" width="480" height="480" loading="lazy" decoding="async">
+          </picture>
           <div>
             <p class="label label--gold">Founder</p>
             <h2 class="founder__name" id="founder-title">Jigmat Paljor</h2>
-            <p class="founder__role">Energy, HVAC and climate-resilient solutions. IIT Delhi.</p>
-            <p style="margin-top:1.2rem;color:var(--text-muted);max-width:46ch">SEEHWA was founded on a simple observation: the systems that keep a house warm, a field watered and a clinic staffed in Ladakh are the same system, and treating them separately is why so much stops working after the first winter.</p>
+            <p class="founder__role">Energy, HVAC &amp; climate-resilient solutions</p>
+            <p class="founder__bio">The founder of Seehwa Green Foundation. Master in Energy Studies (IIT Delhi), HVAC and climate-resilient solutions.</p>
           </div>
         </div>
       </div>
@@ -129,34 +124,42 @@
           </div>
         </div>
         <div class="people">
-          <div class="person">
-            <p class="person__name">Jigmat Paljor</p>
-            <p class="person__role">Founder &middot; Energy, HVAC &amp; climate-resilient solutions</p>
-          </div>
-          <div class="person">
-            <p class="person__name">Tsewang Nurbu</p>
-            <p class="person__role">Agri-ecology</p>
-          </div>
-          <div class="person">
-            <p class="person__name">Mipham Jigmet</p>
-            <p class="person__role">Environment &amp; waste management</p>
-          </div>
-          <div class="person">
-            <p class="person__name">Spalzes Wangmo</p>
-            <p class="person__role">Energy management systems</p>
-          </div>
-          <div class="person">
-            <p class="person__name">Mehdi Shah</p>
-            <p class="person__role">Climate &amp; sustainability consulting</p>
-          </div>
-          <div class="person">
-            <p class="person__name">Rinchen Angdus Tubak</p>
-            <p class="person__role">Ecology &amp; sustainability</p>
-          </div>
-          <div class="person">
-            <p class="person__name">Ar. Shruti Ajabe</p>
-            <p class="person__role">Sustainable design</p>
-          </div>
+          <article class="person">
+            <picture class="person__photo">
+              <source type="image/webp" srcset="assets/images/opt/team/shruti-ajabe.webp">
+              <img src="assets/images/opt/team/shruti-ajabe.jpg" alt="Ar. Shruti Ajabe" width="480" height="480" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="person__name">Ar. Shruti Ajabe</h3>
+            <p class="person__role">Sustainable Design Executive</p>
+            <p class="person__bio">I am an architect and Sustainable Design Executive at Seehwa Green, holding a B.Arch from BNCA, Pune. With professional experience across Pune, Dehradun, and Ladakh, I have worked in landscape, residential, and commercial architecture, along with on-site execution.</p>
+            <p class="person__bio">Currently, I focus on sustainable and climate-responsive architecture in Ladakh, striving to create resilient, resource-conscious, and context-sensitive structures that respond to the region&rsquo;s unique climate, materials, culture, and communities.</p>
+          </article>
+          <article class="person">
+            <picture class="person__photo">
+              <source type="image/webp" srcset="assets/images/opt/team/tsering-dolma.webp">
+              <img src="assets/images/opt/team/tsering-dolma.jpg" alt="Tsering Dolma" width="480" height="480" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="person__name">Tsering Dolma</h3>
+            <p class="person__role">Visual Designer &amp; Illustrator</p>
+            <p class="person__bio">I work as a Graphic Designer and Illustrator at Seehwa Green Foundation, where I use creativity and storytelling to support work that connects people, communities, and the environment. I hold a Bachelor of Arts from the University of Delhi and am a self-taught artist who has been drawn to art and nature since childhood.</p>
+            <p class="person__bio">Growing up in Ladakh has deeply shaped the way I see and create, inspiring me to explore the relationship between culture, people, and the natural world. Through my work at Seehwa Green Foundation, I hope to contribute creatively to meaningful initiatives that nurture communities and encourage a deeper connection with our environment.</p>
+          </article>
+          <article class="person">
+            <picture class="person__photo">
+              <source type="image/webp" srcset="assets/images/opt/team/rigzen-norbu.webp">
+              <img src="assets/images/opt/team/rigzen-norbu.jpg" alt="Rigzen Norbu" width="480" height="480" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="person__name">Rigzen Norbu</h3>
+            <p class="person__role">Software Developer</p>
+            <p class="person__bio">M.Tech in Computer Science and Engineering, IIT Delhi.</p>
+          </article>
+          <article class="person">
+            <picture class="person__photo">
+              <source type="image/webp" srcset="assets/images/opt/team/skarma.webp">
+              <img src="assets/images/opt/team/skarma.jpg" alt="Skarma" width="480" height="480" loading="lazy" decoding="async">
+            </picture>
+            <h3 class="person__name">Skarma</h3>
+          </article>
         </div>
       </div>
     </section>
@@ -173,15 +176,6 @@
             <p>Collective expertise across the team covers agri-ecology, environment and waste management, energy systems, content and design, public policy, sustainability, data analytics and strategic advisory.</p>
           </div>
         </div>
-        <figure style="margin-top:clamp(2rem,4vw,3.5rem)">
-          <picture>
-          <source type="image/webp"
-                  srcset="assets/images/opt/team-640.webp 640w,
-                          assets/images/opt/team-1024.webp 1024w"
-                  sizes="100vw">
-          <img src="assets/images/opt/team.jpg" alt="SEEHWA founders, core team and expert advisors" width="1080" height="946" loading="lazy" decoding="async">
-        </picture>
-        </figure>
       </div>
     </section>
 
