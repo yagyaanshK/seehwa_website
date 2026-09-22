@@ -1227,7 +1227,7 @@ a.tile:hover {
   text-align: left;
 }
 .person__bio + .person__bio { margin-top: .6rem; }
-@media (max-width: 960px) {
+@media (max-width: 760px) {
   .people { --people-cols: 2; }
 }
 @media (max-width: 640px) {
