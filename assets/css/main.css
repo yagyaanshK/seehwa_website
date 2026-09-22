@@ -1191,10 +1191,15 @@ a.tile:hover {
 }
 
 .people {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1rem, 2vw, 1.5rem);
-  max-width: 920px;
+  --people-gap: clamp(1rem, 2vw, 1.5rem);
+  --people-cols: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--people-gap);
+}
+.people > .person {
+  flex: 0 0 calc((100% - (var(--people-cols) - 1) * var(--people-gap)) / var(--people-cols));
 }
 .person {
   background: var(--white);
@@ -1222,8 +1227,11 @@ a.tile:hover {
   text-align: left;
 }
 .person__bio + .person__bio { margin-top: .6rem; }
+@media (max-width: 960px) {
+  .people { --people-cols: 2; }
+}
 @media (max-width: 640px) {
-  .people { grid-template-columns: 1fr; }
+  .people { --people-cols: 1; }
 }
 
 /* ==========================================================================
